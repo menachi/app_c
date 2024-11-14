@@ -1,6 +1,3 @@
-###
-
-GET http://localhost:3000
 
 ###
 
@@ -8,8 +5,23 @@ GET http://localhost:3000/posts
 
 ###
 
-POST http://localhost:3000/posts
+GET http://localhost:3000/posts?owner=Eliav
 
 ###
 
-DELETE http://localhost:3000/posts
+GET http://localhost:3000/posts/6734b0c818a1cf8344804554
+
+###
+
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+    "title": "Hello",
+    "owner": "Kevin",
+    "content": "Hello World..."
+}
+
+###
+
+DELETE http://localhost:3000/posts/6734b0c818a1cf8344804554
