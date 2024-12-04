@@ -1,4 +1,4 @@
-const initApp = require("./server");
+import initApp from "./server";
 const port = process.env.PORT;
 
 console.log("1");
@@ -8,4 +8,3 @@ initApp().then((app) => {
   });
 });
 
-// module.exports = app;
