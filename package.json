@@ -6,21 +6,27 @@
   "scripts": {
     "dev": "nodemon ./src/app.ts",
     "start": "tsc && node ./dist/app.js",
-    "test": "jest --detectOpenHandles --forceExit --coverage",
+    "test": "jest --detectOpenHandles --forceExit --runInBand",
+    "testAuth": "jest --detectOpenHandles --forceExit auth.test.ts",
+    "testPost": "jest --detectOpenHandles --forceExit posts.test.ts",
     "lint": "eslint . --ext .ts"
   },
   "author": "Eliav Menachi",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.8.1"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
     "@types/body-parser": "^1.19.5",
     "@types/express": "^5.0.0",
     "@types/jest": "^29.5.14",
+    "@types/jsonwebtoken": "^9.0.7",
     "@types/supertest": "^6.0.2",
     "@typescript-eslint/eslint-plugin": "^8.17.0",
     "@typescript-eslint/parser": "^8.17.0",
