@@ -51,7 +51,7 @@ class BaseController<T> {
         const id = req.params.id;
         try {
             const rs = await this.model.findByIdAndDelete(id);
-            res.status(200).send(rs);
+            res.status(200).send("deleted");
         } catch (error) {
             res.status(400).send(error);
         }
