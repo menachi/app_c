@@ -6,6 +6,7 @@ import express, { Express } from "express";
 import postsRoute from "./routes/posts_route";
 import commentsRoute from "./routes/comments_route";
 import authRoutes from "./routes/auth_route";
+import fileRoute from "./routes/file_route";
 import swaggerJsDoc from "swagger-jsdoc";
 import swaggerUI from "swagger-ui-express";
 
@@ -18,9 +19,20 @@ app.use((req, res, next) => {
   res.header("Access-Control-Allow-Methods", "*");
   next();
 });
+// app.use(async (req, res, next) => {
+//   await new Promise<void>((resolve) => {
+//     setTimeout(() => {
+//       resolve();
+//     }, 3000);
+//   })
+//   next();
+// });
 app.use("/posts", postsRoute);
 app.use("/comments", commentsRoute);
 app.use("/auth", authRoutes);
+app.use("/file", fileRoute);
+app.use("/public", express.static("public"));
+app.use(express.static("front"));
 
 const options = {
   definition: {

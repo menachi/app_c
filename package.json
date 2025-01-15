@@ -9,6 +9,7 @@
     "test": "cp .env_test .env jest && --detectOpenHandles --forceExit --runInBand",
     "testAuth": "cp .env_test .env && jest --detectOpenHandles --forceExit auth.test.ts",
     "testPost": "cp .env_test .env && jest --detectOpenHandles --forceExit posts.test.ts",
+    "testFile": "cp .env_test .env && jest --detectOpenHandles --forceExit file.test.ts",
     "lint": "eslint . --ext .ts"
   },
   "author": "Eliav Menachi",
@@ -20,6 +21,7 @@
     "express": "^4.21.1",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.8.1",
+    "multer": "^1.4.5-lts.1",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
   },
@@ -29,6 +31,7 @@
     "@types/express": "^5.0.0",
     "@types/jest": "^29.5.14",
     "@types/jsonwebtoken": "^9.0.7",
+    "@types/multer": "^1.4.12",
     "@types/supertest": "^6.0.2",
     "@types/swagger-jsdoc": "^6.0.4",
     "@types/swagger-ui-express": "^4.1.7",
